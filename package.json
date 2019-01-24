@@ -1,11 +1,14 @@
 {
   "name": "webpack-react",
+  "homepage": "https://dariazielinska.github.io/Meal_Planning_second_version",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --open --mode development --env.dev",
-    "build": "./node_modules/.bin/webpack --env.prod"
+    "build": "./node_modules/.bin/webpack --env.prod",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -47,6 +50,7 @@
   },
   "dependencies": {
     "firebase": "^5.7.2",
+    "gh-pages": "^2.0.1",
     "react-router-dom": "^4.3.1"
   }
 }
